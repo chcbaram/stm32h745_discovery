@@ -1,0 +1,512 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "ai1.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 90,
+            "Y": 287,
+            "Width": 300,
+            "Height": 129,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Components": [],
+                "Name": "swipeContainer1Page1",
+                "X": 0,
+                "Y": 0,
+                "Width": 250,
+                "Height": 250,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": false,
+            "PageIndicatorX": 0,
+            "PageIndicatorY": 0,
+            "CenteredX": false,
+            "IndicatorImageNormal": "__designer\\blue_pageindicator_dot_indicator_small_normal.png",
+            "IndicatorImageHighlight": "__designer\\blue_pageindicator_dot_indicator_small_highlight.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainer1Page1",
+            "Style": "Style1",
+            "Name": "swipeContainer1",
+            "X": 0,
+            "Y": 0,
+            "Width": 250,
+            "Height": 250,
+            "Type": "SwipeContainer",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\dark_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\dark_buttons_round_edge_small.png",
+            "Alpha": 0,
+            "TextId": "SingleUseId1",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Name": "buttonWithLabel1",
+            "X": 155,
+            "Y": 190,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 90,
+              "Y": 40,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 1000,
+              "ActionComponent": "image1",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "InteractionToTriggerOn": "Interaction1",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "Duration": 100,
+              "Type": "ActionDelay"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithLabel1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen2",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "Interaction2",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "Alpha": 255,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 500,
+              "ActionComponent": "buttonWithLabel1",
+              "Type": "ActionFade"
+            }
+          }
+        ],
+        "Name": "Screen1",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_concrete_seamless.png",
+            "Alpha": 255,
+            "Style": "Texture5",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\dark_buttons_round_edge_icon_button_pressed.png",
+            "Released": "__designer\\dark_buttons_round_edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\blue_icons_home_32.png",
+            "IconReleased": "__designer\\blue_icons_home_32.png",
+            "IconX": 15,
+            "IconY": 16,
+            "IconHeight": 29,
+            "IconWidth": 30,
+            "Name": "buttonWithIcon1",
+            "X": 420,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ButtonWithIcon",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Components": [
+                  {
+                    "RelativeFilename": "ai4.png",
+                    "Alpha": 255,
+                    "Name": "image3",
+                    "X": 95,
+                    "Y": 60,
+                    "Width": 150,
+                    "Height": 131,
+                    "Type": "Image",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "TextId": "SingleUseId2",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea1",
+                    "X": 110,
+                    "Y": 206,
+                    "Width": 120,
+                    "Height": 20,
+                    "Type": "TextArea",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Name": "swipeContainer1Page3",
+                "X": 0,
+                "Y": 0,
+                "Width": 340,
+                "Height": 250,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [
+                  {
+                    "RelativeFilename": "ai2.png",
+                    "Alpha": 255,
+                    "Name": "image1",
+                    "X": 95,
+                    "Y": 61,
+                    "Width": 150,
+                    "Height": 130,
+                    "Type": "Image",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "TextId": "SingleUseId3",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea1_1",
+                    "X": 110,
+                    "Y": 206,
+                    "Width": 120,
+                    "Height": 20,
+                    "Type": "TextArea",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Name": "swipeContainer1Page2",
+                "X": 0,
+                "Y": 0,
+                "Width": 340,
+                "Height": 250,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [
+                  {
+                    "RelativeFilename": "ai3.png",
+                    "Alpha": 255,
+                    "Name": "image2",
+                    "X": 95,
+                    "Y": 55,
+                    "Width": 150,
+                    "Height": 140,
+                    "Type": "Image",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "TextId": "SingleUseId4",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea1_1_1",
+                    "X": 115,
+                    "Y": 206,
+                    "Width": 120,
+                    "Height": 20,
+                    "Type": "TextArea",
+                    "Visible": true,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Name": "swipeContainer1Page1",
+                "X": 0,
+                "Y": 0,
+                "Width": 340,
+                "Height": 250,
+                "Type": "Container",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "PageIndicatorX": 0,
+            "PageIndicatorY": 0,
+            "CenteredX": false,
+            "IndicatorImageNormal": "__designer\\blue_pageindicator_dot_indicator_small_normal.png",
+            "IndicatorImageHighlight": "__designer\\blue_pageindicator_dot_indicator_small_highlight.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainer1Page3",
+            "Style": "Style1",
+            "Name": "swipeContainer1",
+            "X": 65,
+            "Y": 11,
+            "Width": 340,
+            "Height": 250,
+            "Type": "SwipeContainer",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithIcon1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "Screen2",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "RelativeFilename": "ai2.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 74,
+            "Y": 30,
+            "Width": 150,
+            "Height": 130,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "CustomContainer1",
+        "X": 91,
+        "Y": 35,
+        "Width": 298,
+        "Height": 191,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      }
+    ],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      }
+    ],
+    "Name": "stm32h745",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../../lib/TouchGFX/touchgfx",
+    "UIPath": ".",
+    "ApplicationTemplate": {
+      "Name": "STM32H750B-DK",
+      "Version": "1.0.0",
+      "Description": "The board support package \"STM32H750 Discovery Kit\" has target compiler support for IAR and GCC.\nFlashing the board requires ST-Link Utility which can be downloaded from the ST webpage.\nThis BSP is based on a subset of the STM32CubeH7 driver package, version 1.4.0.\n\nFlashing the STM32H750 Discovery board from within the Designer requires STM32CubeProgrammer installed, which is available from the ST webpage.",
+      "AvailableColorDepths": [
+        24
+      ],
+      "AvailableImageFormats": {
+        "24": {
+          "Opaque": "RGB888",
+          "NonOpaque": "ARGB8888"
+        }
+      },
+      "AvailableResolutions": [
+        {
+          "Width": 480,
+          "Height": 272
+        }
+      ],
+      "PhysicalButtons": [],
+      "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j10",
+      "PostGenerateCommand": "echo test",
+      "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j10",
+      "RunSimulatorCommand": "build\\bin\\simulator.exe",
+      "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+      "FlashTargetCommand": "make -f ../gcc/Makefile -j8 flash"
+    }
+  },
+  "Version": "4.10.0",
+  "CreatedBy": "4.10.0"
+}
