@@ -1,0 +1,21 @@
+Converting images
+Compiling gui/src/screen2_screen/Screen2View.cpp
+Compiling gui/src/screen1_screen/Screen1View.cpp
+Compiling generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp
+gui/src/screen2_screen/Screen2View.cpp:2:16: fatal error: hw.h: No such file or directory
+ #include "hw.h"
+                ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+gui/src/screen1_screen/Screen1View.cpp:2:16: fatal error: hw.h: No such file or directory
+ #include "hw.h"
+                ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o] Error 1
+simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
+make[1]: *** [generate_assets] Error 2
+simulator/gcc/Makefile:40: recipe for target 'all' failed
+make: *** [all] Error 2
