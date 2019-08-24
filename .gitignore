@@ -1,2 +1,3 @@
 stm32h745_fw/Debug/
 stm32h745_fw_hid/Debug/
+stm32h745_fw_x86/src/ap/TouchGFX/build/
